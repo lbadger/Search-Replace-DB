@@ -1,4 +1,4 @@
-#!/usr/bin/php -q
+#!/usr/bin/hhvm
 <?php
 date_default_timezone_set( 'America/Denver' );
 
@@ -13,8 +13,8 @@ $opts = array(
 	'c:' => 'char:',
 	's:' => 'search:',
 	'r:' => 'replace:',
-    't:' => 'tables:',
-    'd:' => 'exclude-tables:',
+    	't:' => 'tables:',
+	'd:' => 'exclude-tables:',
 	'i:' => 'include-cols:',
 	'x:' => 'exclude-cols:',
 	'g' => 'regex',
@@ -84,8 +84,6 @@ ARGS
   -t, --tables
     If set only runs the script on the specified table, comma
         separate for multiple values.
-  -d, --exclude-tables
-    Run all tables except listed tables.
   -i, --include-cols
     If set only runs the script on the specified columns, comma
     separate for multiple values.
@@ -110,6 +108,8 @@ ARGS
     are ignored. They will not be run simultaneously.
   -v, --verbose [true|false]
     Defaults to true, can be set to false to run script silently.
+  -d, --exclude-tables
+    Run all tables except listed tables.
   --help
     Displays this help message ;)
 ";
